@@ -1,0 +1,39 @@
+
+# Notif JMS Provider URL
+notifJmsProviderUrl: t3://168.108.134.189:20204
+
+#JMS InitialContextFactory
+jmsInitialContextFactory: weblogic.jndi.WLInitialContextFactory
+
+#NotificationConnectionFactory
+notifJmsQueueConnectionFactory: com.cibc.jmsConnectionFactory.notificationConnectionFactory
+
+#NotificationMessageQueue
+notifJmsQueue: com.cibc.queue.messageReceiverQueue
+
+#NotificationMessage UnitOfOrder
+notifJmsMsgUnitOfOrderDisabled: false
+
+#JMS Principal
+jmsSecurityPrincipal: devadmin
+
+# Log JMS Provider URL
+logJmsProviderUrl: t3://168.108.134.189:20207
+
+#LogManagerConnectionFactory
+logJmsQueueConnectionFactory: com.cibc.eccs.omni.QueueFactory
+
+#LogManagerQueue
+logJmsQueue: com.cibc.eccs.omni.logging.incoming.queue
+
+#LogType
+logType: UpdateEvent
+
+#SourceSystem
+sourceSystem: ECIFMS
+
+#TargetSystem
+targetSystem: NM
+
+#RetryCount
+retryCount: 2

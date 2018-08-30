@@ -1,0 +1,13 @@
+---
+tableName: API_MESSAGE
+idField: API_MSG_ID
+publishedField: API_MSG_STATUS_CODE
+headers: API_MSG_HEADER
+destination: API_MSG_DESTINATION
+payload: API_MSG_PAYLOAD
+
+#jmsEnv
+jmsEnv: PROD
+
+#jmsRelease
+jmsRelease: Current

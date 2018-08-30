@@ -1,0 +1,28 @@
+# Singleton service factory configuration/IoC injection
+singletons:
+# Decryptor
+- com.networknt.utility.Decryptor:
+  - com.networknt.decrypt.AESDecryptor
+
+- javax.sql.DataSource: com.cibc.apifoundation.dataaccess.OracleDataSource::getDataSource
+
+- com.networknt.eventuate.jdbc.EventuateSchema:
+  - com.networknt.eventuate.jdbc.EventuateSchema:
+    - java.lang.String: API_MSG
+
+- com.networknt.tram.cdc.polling.connector.MessagePollingDataProvider:
+  - com.networknt.tram.cdc.polling.connector.MessagePollingDataProvider
+
+- com.networknt.eventuate.server.common.PublishingStrategy:
+  - com.cibc.api.party.notification.cdc.NotificationPublishingStrategy
+
+# HandlerProvider implementation
+- com.networknt.server.HandlerProvider:
+  - com.cibc.api.party.notification.cdc.CdcServer
+# StartupHookProvider implementations, there are one to many and they are called in the same sequence defined.
+- com.networknt.server.StartupHookProvider:
+  - com.cibc.api.party.notification.cdc.CdcServerStartupHookProvider
+# ShutdownHookProvider implementations, there are one to many and they are called in the same sequence defined.
+- com.networknt.server.ShutdownHookProvider:
+  - com.cibc.api.party.notification.cdc.CdcServerShutdownHookProvider
+# MiddlewareHandler implementations, the calling sequence is as defined in the request/response chain.

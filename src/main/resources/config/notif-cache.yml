@@ -1,0 +1,5 @@
+#JMSPool
+poolMaxSize: 5
+
+#SkipPool
+skipPool: true

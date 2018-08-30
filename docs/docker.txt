@@ -1,0 +1,6 @@
+docker ps
+docker exec -it <container-id> sh
+
+CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS              PORTS                                            NAMES
+cc5ec6b0fbeb        sath89/oracle-xe-11g   "/entrypoint.sh "   2 months ago        Up 2 months         0.0.0.0:1521->1521/tcp, 0.0.0.0:8081->8080/tcp   priceless_banach
+docker exec -it cc5ec6b0fbeb sh

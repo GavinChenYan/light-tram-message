@@ -1,0 +1,12 @@
+OracleDataSource:
+  DriverClassName: oracle.jdbc.pool.OracleDataSource
+  jdbcUrl: jdbc:oracle:thin:@localhost:1521:XE
+  username: SYSTEM
+  parameters:
+    maximumPoolSize: '10'
+    useServerPrepStmts: 'true'
+    cachePrepStmts: 'true'
+    cacheCallableStmts: 'true'
+    prepStmtCacheSize: '10'
+    prepStmtCacheSqlLimit: '2048'
+    connectionTimeout: '2000'
